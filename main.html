@@ -1,18 +1,17 @@
 <html>
 <head>
     <title>Canvaspaint</title>
-    <script src="jquery.min.js"></script>
-    <script src="Colors.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="DivCanvas.js"></script>
     <style>
     div.row {
-        clear:both;
+        clear: both;
     }
     div.pixel {
-        width:1px;
-        height:1px;
-        float:left;
-        background:rgb(238,238,238);
+        width:      1px;
+        height:     1px;
+        float:      left;
+        background: rgb(238,238,238);
     }
     </style>
 </head>
@@ -23,14 +22,13 @@
 var row = 100;
 var col = 100;
 $(window).load(function() {
-
     var div = new DivCanvas('container', 100, 100, 238);
     div.move(0,0);
     $('.pixel').click(function() {
         console.log('event');
         var x = $(this).data('x');
         var y = $(this).data('y');
-        div.lineTo(x,y);
+        div.lineTo(x, y);
     });
 });
 </script>
